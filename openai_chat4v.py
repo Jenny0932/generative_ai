@@ -12,11 +12,6 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-# https://www.smartsheet.com/sites/default/files/styles/900px/public/IC-Business-Invoice-Template.webp?itok=XR3kFM1T
-# "What’s in this image? What's the company name and the phone number? Please return me the result with company name and phone number in a json list"
-# https://cdn.concreteplayground.com/content/uploads/2018/03/central-station-revamp4-supplied-1920x1080.jpeg
-# What's in this image? Is there any unusual activity in it? What's the status of the escalators? How many people in the image? Note that B stands for Bus, T stands for Train, L stands for Lightrail, and M stands for Metro
-
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
