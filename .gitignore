@@ -1,2 +1,5 @@
 *.log
 venv/*
+.env
+.swp
+.profile
