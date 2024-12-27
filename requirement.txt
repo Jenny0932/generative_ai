@@ -9,3 +9,4 @@ langchain-experimental
 pandas
 tabulate
 streamlit
+beautifulsoup4

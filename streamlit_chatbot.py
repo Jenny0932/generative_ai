@@ -27,7 +27,8 @@ for message in st.session_state.messages: # Display the prior chat messages
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
-            response = client.chat.completions.create(model="gpt-3.5-turbo", messages=st.session_state.messages)
+            response = client.chat.completions.create(model="gpt-4o",
+                                                       messages=st.session_state.messages)
             ai_msg = response.choices[0].message.content
             st.write(ai_msg)
             message = {"role": "assistant", "content": ai_msg}
